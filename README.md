@@ -1,6 +1,11 @@
 ## Code Trends, Quantified: Mapping the Programming Language Ecosystem
 
-**BA820: Unsupervised Machine Learning | Team 14**
+**BA820: Unsupervised Machine Learning | Team 14** <br>
+**Contributors:** 
+1. **Vishesh Goyal** (*BackBencher2424*)
+2. **Drishti Chulani** (*DrishtiChulani*)
+3. **Arshdeep Singh Oberoi** (*arshdeep-gif*)
+4. **Ahrar Karim** (*ahrar11*)
 
 ---
 
