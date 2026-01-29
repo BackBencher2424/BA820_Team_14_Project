@@ -44,7 +44,7 @@ This project utilizes a comprehensive metadata repository of over **4,000 progra
 
 ---
 
-### 📂 Repository Structure
+###  Repository Structure
 * `data/`: Raw and processed versions of the PLDB dataset.
 * `notebooks/`: 
     * `EDA_Primary_Dataset.ipynb`: Comprehensive exploratory analysis and visualizations.
