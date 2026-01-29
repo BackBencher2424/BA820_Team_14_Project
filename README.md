@@ -1,78 +1,102 @@
 ## Code Trends, Quantified: Mapping the Programming Language Ecosystem
+
 **BA820: Unsupervised Machine Learning | Team 14**
 
 ---
 
-##  Project Motivation: The Architecture of Human-Computer Interaction
-Programming languages are the intersection of human logic and industrial demand. With over 4,000 languages in existence, the ecosystem is too vast for manual categorization. This project applies Unsupervised Machine Learning to discover hidden structures—evolutionary lineages, technical similarity clusters, and the "hype-utility" gap—that define the modern programming landscape. 
-
-By analyzing the "Long Tail" of data, we move beyond simple popularity ranks to provide actionable insights for EdTech curriculum development, career ROI assessment, and technical risk management for CTOs.
-
-[Image of a network graph of programming language relationships]
+###  Project Motivation:
+As Business Analytics students, we work with Python daily but realized we were only seeing a fraction of the full programming landscape. This project emerged from wanting to look beyond the hype, by using data analysis to understand the actual ecosystem rather than just the noise. We're mapping the scale of languages that exist, from historical systems to modern releases, and using that data to separate genuine industry impact from marketing noise. 
+The goal is straightforward: to identify which languages actually matter and spot emerging trends worth paying attention to. Major stakeholders would be Chief Technology Offiers(CTOs), Product Managers, School Educators, Mentors and Students.
 
 ---
 
-##  The Data
-The project utilizes a rich metadata repository of over 4,000 programming languages sourced from the PLDB.
-* **Scope:** 49 features including syntax metadata, community metrics, and economic indicators.
-* **Structured Indicators:** Features include file extensions, comment styles, case sensitivity, GitHub stars, Wikipedia views, and job postings.
-* **Why this data?** Unlike traditional datasets that focus on a few "superstar" languages, this dataset represents the entire ecosystem as abstract, measurable concepts, allowing us to analyze the "long tail" of the industry.
+###  The Data
+This project utilizes a comprehensive metadata repository of over **4,000 programming languages**. This dataset is unique because it treats mathematical notations, ancient numeral systems, and modern syntax as a single continuous lineage of human logic.
+
+#### Data Structure & Composition
+* **Scope:** 4,303 entries with 49 technical, community, and economic features.
+* **Feature Categories:** * **Technical:** Syntax patterns (assignment operators, comment tokens), file types, and case sensitivity.
+    * **Social:** GitHub stars, forks, Wikipedia daily views, and language rank.
+    * **Economic:** Job postings (where HTTP and SQL currently lead) and estimated user populations.
+      
+---
+
+###  Research Questions
+
+#### 1. The Market Discovery
+* **Focus:**  Do programming languages naturally cluster into distinct groups based on shared technical features (syntax patterns, file types) and community signals (GitHub activity, Wikipedia view)
+
+#### 2. Economic Strategy
+* **Focus** Can we segment programming languages into distinct "Market Archetypes": specifically "Hype Driven" (high GitHub stars/subscribers, low job counts) vs. "Silent" (low social hype, high job counts and user estimates)
+
+#### 3. Risk Mitigation
+* **Focus:** Can we detect "Ghost Languages" technologies with significant cultural visibility (high Wikipedia views and rankings) but virtually no real employment ecosystem?
+
+#### 4. Success Pillars Optimization
+* **Focus:** Among the 49 technical metadata features we have (syntax patterns, file types, naming conventions), which ones actually predict how long a language survives and remains relevant in the long run?
 
 ---
 
-##  Why Unsupervised Learning?
-The programming language market lacks pre-defined labels for "Market Archetypes" or "Structural Families." We use unsupervised methods to let the data reveal its own latent structure, which is essential for:
-1.  **Discovery:** Finding "Hidden Families" without the bias of popularity.
-2.  **Anomaly Detection:** Identifying "Ghost Languages" that defy typical market correlations.
-3.  **Dimensionality Reduction:** Simplifying 49 variables into core "Success Pillars" that drive language longevity.
-
-[Image of K-Means clustering algorithm partitioning data points]
-
----
-
-##  Research Questions
-
-### 1. The "Blue Ocean" Market Discovery (Clustering)
-* **Question:** Do programming languages naturally cluster into distinct "Hidden Families" based on shared technical features (syntax, file types) and community signals?
-* **Motivation:** EDA showed that GitHub stars and job counts are extremely right-skewed. We want to see if the "Long Tail" of overlooked languages shares structural DNA with successful ones.
-* **Decision Impact:** Helps EdTech companies identify niche markets to develop specialized curricula, moving away from saturated spaces like Python/Java.
-* **Surprise:** If legacy languages (pre-1980) cluster with modern cloud-native languages based on engagement patterns.
-
-### 2. The "Hype vs. Utility" Strategy (Clustering)
-* **Question:** Can we segment the market into distinct "Market Archetypes"—specifically "Social Darlings" (high hype, low jobs) vs. "Silent Giants" (low hype, high infrastructure)?
-* **Motivation:** Scatter plots reveal a massive disconnect where high "stargazing" does not translate to employment.
-* **Decision Impact:** Acts as a risk-assessment tool for CTOs to distinguish between "fads" and "stable tools" before committing to a tech stack migration.
-* **Surprise:** If corporate-backed languages generate significantly more social "noise" than actual industrial deployment compared to grassroots languages.
-
-### 3. The "Ghost Language" Phenomenon (Anomaly Detection)
-* **Question:** Can we mathematically isolate "Ghost Languages"—technologies with high "Social Presence" (Wikipedia) but near-zero "Economic Infrastructure" (Jobs)?
-* **Motivation:** The median for `number_of_jobs` is 0, yet the `language_rank` varies widely. This "all talk, no walk" imbalance is a clear statistical anomaly.
-* **Decision Impact:** Protects students and professionals from investing time in "Academic Icons" that have failed to cross over into the industry.
-* **Surprise:** Finding a language in the top 10% of Wikipedia views that is a total outlier with zero recorded jobs.
-
-
-
-### 4. Structural Success Pillars (PCA)
-* **Question:** Which combination of the 49 metadata features (syntax, identifiers) explains the most variance in a language's long-term survival?
-* **Motivation:** The dataset is high-dimensional with many correlated features; we need to reduce this noise to find the core drivers of technical longevity.
-* **Decision Impact:** Allows language designers to understand which technical specs are most associated with a language surviving its first decade.
-* **Surprise:** If "Metadata Completeness" (having a domain name) explains more variance than actual syntax features.
-
-
-
----
-
-##  Planned Analysis
+###  Planned Analysis
 * **Preprocessing:** Log-transforming skewed community metrics and handling high-missingness technical columns.
 * **Clustering:** Applying **K-Means** and **Hierarchical Clustering** to define market segments and technical lineages.
-* **Anomaly Detection:** Utilizing **Isolation Forests** or **DBSCAN** to detect the "Ghost Language" phenomenon.
 * **Dimensionality Reduction:** Using **Principal Component Analysis (PCA)** to simplify the feature space and identify core variance.
 
 ---
 
-## 📂 Repository Structure
+### 📂 Repository Structure
 * `data/`: Raw and processed versions of the PLDB dataset.
 * `notebooks/`: 
     * `EDA_Primary_Dataset.ipynb`: Comprehensive exploratory analysis and visualizations.
-    * `Modeling_Final.ipynb`: Implementation of clustering and anomaly detection logic.
 * `reports/`: Documentation for project milestones and the final proposal.
+
+
+------
+
+## Backup Project: Decoding Bob Ross Paintings
+
+**BA820: Unsupervised Machine Learning | Team 14**
+
+---
+
+###  Project Motivation
+Bob Ross's *The Joy of Painting* is an unusual phenomenon representing the confluence of art, education, and visual consistency on a large scale. While his paintings appear uniform in style at first glance, the series contains significant variation in color usage, composition, and subject matter. Because this dataset represents paintings as abstract concepts (binary indicators for colors and elements) rather than raw pixels, it creates a unique opportunity to analyze artistic patterns at scale.
+
+From a business perspective, discovering the latent structure in this data can revolutionize content organization for media archives and art education platforms. Identifying visual templates and "styles" enables:
+* **Recommendation Systems:** Suggesting episodes based on preferred visual "moods."
+* **Curriculum Design:** Organizing art education tracks by composition complexity.
+* **Thematic Curation:** Creating structured archives for streaming or digital galleries.
+
+---
+
+###  Preliminary EDA Insights
+Our initial analysis of the painting metadata revealed several key structural patterns:
+
+1. **Palette Skewness:** The distribution of `num_colors` is highly skewed. While most paintings rely on a consistent core set, a "long tail" of paintings uses much richer, complex sets of colors.
+2. **Co-occurrence Bundles:** Landscape elements (trees, mountains, water) are not randomly placed; they tend to co-occur in repeatable "composition bundles" or templates.
+3. **Composition Density:** There is a significant range in complexity—some paintings are sparse while others are dense with elements—suggesting a deliberate stylistic choice across the series.
+4. **Non-Linear Evolution:** Using the `chronological_order` variable, we found that while combinations change, there is no simple linear trend in palette size, implying style evolves in waves throughout the series.
+
+---
+
+###  Research Questions
+
+#### 1. Style Discovery (The "Palette vs. Subject" Type)
+* **Focus:** Do paintings cluster more effectively based on their **color palette structure** or the specific **landscape elements** depicted? 
+
+#### 2. Structural Evolution (The "Composition vs. Matter" Type)
+* **Focus:** Do paintings at different points in the chronological order differ more in **composition structure** (density/complexity) than in their actual **subject matter**?.
+
+#### 3. Contrast Analysis (The "Light vs. Dark" Type)
+* **Focus:** Are there distinct painting clusters defined solely by **contrast intensity** (light vs. dark color mixes), independent of the season or year?
+
+#### 4. Template Identification (The "Element Bundle" Type)
+* **Focus:** Are there recurring **"element bundles"** that appear together far more often than expected given their individual frequencies?
+
+---
+
+###  Repository Structure
+* `data/`: Raw binary indicators for colors and landscape elements.
+* `notebooks/`: 
+    * `EDA_Backup_Dataset.ipynb`: Exploratory analysis of artistic features.
+* `reports/`: Proposal documentation and project synthesis.
